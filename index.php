@@ -69,7 +69,7 @@
 
 <!-- ********************************SNACK 2********************************************************** -->
     <h2>Snack 2</h2>
-    <!-- Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) 
+<!-- Passare come parametri GET name, mail e age e verificare (cercando i metodi che non conosciamo nella documentazione) 
     che name sia più lungo di 3 caratteri, che mail contenga un punto e una chiocciola e che age sia un numero. 
     Se tutto è ok stampare "Accesso riuscito", altrimenti "Accesso negato" -->
 
@@ -85,6 +85,23 @@
             } else{
                 echo "Accesso negato!";
             };
+    ?>
+
+<!-- ********************************SNACK 3********************************************************** -->
+    <h2>Snack 3</h2>
+<!-- Creare un array con 15 numeri casuali, tenendo conto che l'array non dovrà contenere lo stesso numero più di una volta  -->
+    <?php
+        $numbers= [];
+
+        
+        while (count($numbers) < 15 ){
+        $randomNumber = rand(1, 50);
+        if (!in_array($randomNumber, $numbers)){
+                $numbers[] = $randomNumber;
+        };
+        };
+        
+        var_dump($numbers);
     ?>
 </body>
 </html>
