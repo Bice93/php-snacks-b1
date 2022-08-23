@@ -179,10 +179,13 @@
             Nome: <?php echo $students[$i]['firstName']; ?> <br>
             Cognome : <?php echo $students[$i]['lastName']; ?> <br>
             Voto: <?php 
-                $marksAverage = ($students[$i]['marks']['italiano']+
-                            $students[$i]['marks']['matematica']+
-                            $students[$i]['marks']['inglese']) / 3;
+                // $marksAverage = ($students[$i]['marks']['italiano']+
+                //             $students[$i]['marks']['matematica']+
+                //             $students[$i]['marks']['inglese']) / 3;
+                // echo round($marksAverage, 2);
 
+                $sum = array_sum($students[$i]['marks']);
+                $marksAverage = $sum / count($students[$i]['marks']);
                 echo round($marksAverage, 2);
             ?>
         </p>
