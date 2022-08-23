@@ -125,5 +125,68 @@
             <?php echo $paragraphSplit[$i]; ?>
         </p>
     <?php }; ?> 
+
+<!-- ********************************SNACK 5********************************************************** -->
+    <h2>Snack 5</h2>
+<!-- Creare un array contenente qualche alunno di un'ipotetica classe. 
+    Ogni alunno avrà Nome, Cognome e un array contenente i suoi voti scolastici. 
+    Stampare Nome, Cognome e la media dei voti di ogni alunno. -->
+
+    <?php
+        $students = [
+            [
+                'firstName' => 'Marco',
+                'lastName' => 'Rossi',
+                'marks' => [
+                        'italiano' => 8,
+                        'matematica' => 6,
+                        'inglese' => 6,
+                        ],
+            ],
+            [
+                'firstName' => 'Chiara',
+                'lastName' => 'Casale',
+                'marks' => [
+                        'italiano' => 7,
+                        'matematica' => 9,
+                        'inglese' => 8,
+                        ],
+            ],
+            [
+                'firstName' => 'Mario',
+                'lastName' => 'Del Vecchio',
+                'marks' => [
+                        'italiano' => 5,
+                        'matematica' => 4,
+                        'inglese' => 5,
+                        ],
+            ],
+            [
+                'firstName' => 'Sara',
+                'lastName' => 'La Marca',
+                'marks' => [
+                        'italiano' => 6,
+                        'matematica' => 6,
+                        'inglese' => 7,
+                        ],
+            ],
+        ];
+    ?>
+
+    <?php for($i=0; $i< count($students); $i++){ ?>
+
+        <p> 
+            Nome: <?php echo $students[$i]['firstName']; ?> <br>
+            Cognome : <?php echo $students[$i]['lastName']; ?> <br>
+            Voto: <?php 
+                $marksAverage = ($students[$i]['marks']['italiano']+
+                            $students[$i]['marks']['matematica']+
+                            $students[$i]['marks']['inglese']) / 3;
+
+                echo round($marksAverage, 2);
+            ?>
+        </p>
+
+    <?php }; ?>
 </body>
 </html>
