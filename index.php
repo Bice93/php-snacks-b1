@@ -103,5 +103,27 @@
         
         var_dump($numbers);
     ?>
+
+<!-- ********************************SNACK 4********************************************************** -->
+    <h2>Snack 4</h2>
+ <!-- Prendere un paragrafo abbastanza lungo, contenente diverse frasi. 
+    Prendere il paragrafo e suddividerlo in tanti paragrafi. Ogni punto un nuovo paragrafo. -->
+
+    <?php 
+        $paragraph = "Penso che all’epoca stessi cercando una sfida. Eravamo nel pieno della Guerra Fredda. I lettori, i giovani lettori, odiavano profondamente la guerra, non sopportavano i militari. Quindi decisi di realizzare un eroe che fosse l’incarnazione di tutto questo. Era un fabbricante di armi, produceva armamenti per l’Esercito, era ricco ed era un capitalista. All’epoca, pensai che sarebbe stato divertente sviluppare un personaggio che nessun, potenzialmente, avrebbe apprezzato, che nessuno dei nostri lettori avrebbe compreso, con la precisa missione di farglielo piacere e farli appassionare. E divenne popolare. Howard Hughes era uno degli uomini più interessanti di quel tempo. Era un inventore, un avventuriero, un miliardario, un donnaiolo e infine un folle. Tony Stark avrebbe dovuto essere un Howard Hughes, senza la sua follia.";
+        $paragraphSplit = explode('.', $paragraph);
+        var_dump($paragraphSplit);
+    ?>
+    <h5>Paragrafo:</h5>
+    <p>
+        <?php echo $paragraph ?>
+    </p>
+
+    <h5>Paragrafo suddiviso:</h5>
+    <?php for($i=0; $i < count($paragraphSplit); $i++){ ?>    
+        <p>
+            <?php echo $paragraphSplit[$i]; ?>
+        </p>
+    <?php }; ?> 
 </body>
 </html>
